@@ -3,35 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بازی پاستور شرط‌بندی</title>
+    <title>بازی سکه کلاسیک</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="game-container">
-        <h1>پاستور شرط‌بندی 🎲</h1>
-        
-        <div class="bet-section">
-            <div class="balance">موجودی: <span id="balance">1000</span> تومان</div>
-            <input type="number" id="bet-amount" placeholder="مبلغ شرط" min="10">
-            <button id="place-bet">ثبت شرط</button>
+    <div class="coin-app">
+        <header>
+            <h1>سکه پرتابی 🪙</h1>
+            <div class="balance-box">
+                موجودی: <span id="balance">1000</span> تومان
+            </div>
+        </header>
+
+        <div class="coin-container">
+            <div class="coin" id="coin">
+                <div class="side front"></div>
+                <div class="side back"></div>
+            </div>
         </div>
-        
-        <div class="stats">
-            <div class="timer">زمان: <span id="time">0</span> ثانیه</div>
-            <div class="moves">حرکات: <span id="moves">0</span>/6</div>
-            <div class="win-amount">برد احتمالی: <span id="win-amount">0</span> تومان</div>
+
+        <div class="bet-controls">
+            <div class="bet-amount">
+                <label for="amount">مبلغ شرط:</label>
+                <input type="number" id="amount" placeholder="مبلغ به تومان" min="10">
+            </div>
+
+            <div class="bet-options">
+                <button id="bet-head" class="bet-btn">
+                    <span>شیر</span>
+                    <span class="multiplier">1.95x</span>
+                </button>
+                <button id="bet-tail" class="bet-btn">
+                    <span>خط</span>
+                    <span class="multiplier">1.95x</span>
+                </button>
+            </div>
         </div>
-        
-        <div class="cards" id="cards-container"></div>
-        
-        <div class="controls">
-            <button id="start-btn" disabled>شروع بازی</button>
-            <button id="reset-btn" disabled>بازی جدید</button>
+
+        <div class="history">
+            <h3>تاریخچه نتایج</h3>
+            <div id="history-items" class="history-items"></div>
         </div>
-        
+
         <div class="message" id="message"></div>
     </div>
-    
+
     <script src="script.js"></script>
 </body>
 </html>

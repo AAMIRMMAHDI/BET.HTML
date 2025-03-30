@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بازی پاستور شرط‌بندی</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>پاستور شرط‌بندی 🎲</h1>
+        
+        <div class="bet-section">
+            <div class="balance">موجودی: <span id="balance">1000</span> تومان</div>
+            <input type="number" id="bet-amount" placeholder="مبلغ شرط" min="10">
+            <button id="place-bet">ثبت شرط</button>
+        </div>
+        
+        <div class="stats">
+            <div class="timer">زمان: <span id="time">0</span> ثانیه</div>
+            <div class="moves">حرکات: <span id="moves">0</span>/6</div>
+            <div class="win-amount">برد احتمالی: <span id="win-amount">0</span> تومان</div>
+        </div>
+        
+        <div class="cards" id="cards-container"></div>
+        
+        <div class="controls">
+            <button id="start-btn" disabled>شروع بازی</button>
+            <button id="reset-btn" disabled>بازی جدید</button>
+        </div>
+        
+        <div class="message" id="message"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
