@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>داشبورد کاربر</title>
+    <link rel="stylesheet" href="../ASSETS/CSS/style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- هدر -->
+        <header class="dashboard-header">
+            <div class="logo">داشبورد</div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="active">داشبورد</a></li>
+                    <li><a href="#">پشتیبان</a></li>
+                    <li><a href="#">راهنمای بازی</a></li>
+                    <li><a href="#">تخته نرد</a></li>
+                    <li><a href="#">پاسور</a></li>
+                    <li><a href="../GAME/CRASH.html">انفجار</a></li>
+                    <li><a href="../GAME/PLINKO.html">پلینکو </a></li>
+
+                </ul>
+            </nav>
+            <div class="user-account">
+                <span class="username">کاربر مهمان</span>
+                <div class="avatar">👤</div>
+            </div>
+        </header>
+
+
+    <div class="container">
+        <header>
+            <h1>بازی انفجار</h1>
+            <div class="balance-box">
+                موجودی: <span id="balance">1000</span> تومان
+            </div>
+        </header>
+
+        <div class="game-container">
+            <!-- بخش اصلی: نمودار زنده -->
+            <div class="main-game-area">
+                <div class="live-chart-container">
+                    <canvas id="live-chart"></canvas>
+                    <div class="multiplier-display">
+                        <div class="multiplier-label">ضریب فعلی</div>
+                        <div id="current-multiplier" class="multiplier-value">1.00x</div>
+                    </div>
+                </div>
+                
+                <!-- تاریخچه اسکرول -->
+                <div class="horizontal-history">
+                    <h3>تاریخچه بازی‌ها</h3>
+                    <div class="history-container">
+                        <div class="history-scroll" id="history-scroll">
+                            <div class="history-items" id="history-items"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- بخش راست: کنترل‌ها -->
+            <div class="controls-section">
+                <div class="bet-controls">
+                    <h3>تنظیمات شرط</h3>
+                    <div class="form-group">
+                        <label for="bet-amount">مبلغ شرط (تومان)</label>
+                        <input type="number" id="bet-amount" min="1" value="10">
+                        <div class="quick-bets">
+                            <button class="quick-bet" data-amount="10">10</button>
+                            <button class="quick-bet" data-amount="50">50</button>
+                            <button class="quick-bet" data-amount="100">100</button>
+                            <button class="quick-bet" data-amount="500">500</button>
+                            <button class="quick-bet" data-amount="all">همه</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="auto-cashout">
+                            تسویه خودکار
+                        </label>
+                    </div>
+
+                    <div class="form-group" id="auto-cashout-group">
+                        <label for="cashout-multiplier">ضریب تسویه خودکار</label>
+                        <input type="range" id="cashout-multiplier" min="1.1" max="10" step="0.1" value="1.5">
+                        <div id="cashout-value" class="cashout-value">1.5x</div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button id="start-game" class="game-btn start-btn">شروع بازی</button>
+                        <button id="cash-out-btn" class="game-btn cash-out-btn" disabled>
+                            تسویه (<span id="cash-out-amount">0</span> تومان)
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="explosion-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-bomb-explosion-1680.mp3"></audio>
+    <audio id="click-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-modern-click-box-check-1120.mp3"></audio>
+
+    <script src="../ASSETS/JS/script.js"></script>
+</body>
+</html>

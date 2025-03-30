@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>داشبورد کاربر</title>
+    <link rel="stylesheet" href="../ASSETS/CSS/style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- هدر -->
+        <header class="dashboard-header">
+            <div class="logo">داشبورد</div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="active">داشبورد</a></li>
+                    <li><a href="#">پشتیبان</a></li>
+                    <li><a href="#">راهنمای بازی</a></li>
+                    <li><a href="#">تخته نرد</a></li>
+                    <li><a href="#">پاسور</a></li>
+                    <li><a href="../GAME/CRASH.html">انفجار</a></li>
+                    <li><a href="../GAME/PLINKO.html">پلینکو </a></li>
+
+                </ul>
+            </nav>
+            <div class="user-account">
+                <span class="username">کاربر مهمان</span>
+                <div class="avatar">👤</div>
+            </div>
+        </header>
+
+    <div class="auth-container">
+        <div class="auth-card">
+            <h1>ورود به حساب کاربری</h1>
+            
+            <form id="login-form" class="auth-form">
+                <div class="form-group">
+                    <label for="login-email">ایمیل</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="login-password">رمز عبور</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                
+                <button type="submit" class="auth-btn">ورود</button>
+            </form>
+            
+            <div class="auth-links">
+                <a href="#" id="forgot-password">رمز عبور را فراموش کرده‌ام</a>
+                <a href="signup.html" id="go-to-signup">ثبت‌نام کنید</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="forgot-password-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>بازیابی رمز عبور</h2>
+            <form id="forgot-password-form">
+                <div class="form-group">
+                    <label for="recovery-email">ایمیل خود را وارد کنید</label>
+                    <input type="email" id="recovery-email" required>
+                </div>
+                <button type="submit" class="auth-btn">ارسال لینک بازیابی</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../ASSETS/JS/script.js"></script>
+</body>
+</html>

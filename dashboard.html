@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>داشبورد کاربر</title>
+    <link rel="stylesheet" href="ASSETS/CSS/style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- هدر -->
+        <header class="dashboard-header">
+            <div class="logo">داشبورد</div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="active">داشبورد</a></li>
+                    <li><a href="#">پشتیبان</a></li>
+                    <li><a href="#">راهنمای بازی</a></li>
+                    <li><a href="#">تخته نرد</a></li>
+                    <li><a href="#">پاسور</a></li>
+                    <li><a href="../GAME/CRASH.html">انفجار</a></li>
+                    <li><a href="../GAME/PLINKO.html">پلینکو </a></li>
+
+                </ul>
+            </nav>
+            <div class="user-account">
+                <span class="username">کاربر مهمان</span>
+                <div class="avatar">👤</div>
+            </div>
+        </header>
+
+        <!-- محتوای اصلی -->
+        <main class="dashboard-main">
+            <!-- بخش اطلاعات کاربر -->
+            <section class="user-profile">
+                <div class="profile-card">
+                    <div class="avatar-large">👤</div>
+                    <div class="user-info">
+                        <h2>کاربر مهمان</h2>
+                        <p>عضویت از: ۱۴۰۲/۰۵/۱۰</p>
+                        <p>آخرین ورود: امروز - ۱۴:۳۰</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- بخش آمار و موجودی -->
+            <section class="stats-section">
+                <div class="balance-card">
+                    <h3>موجودی حساب</h3>
+                    <div class="balance-amount">1,250,000 <span>تومان</span></div>
+                    <div class="balance-actions">
+                        <button class="btn-primary">شارژ حساب</button>
+                        <button class="btn-secondary">برداشت</button>
+                    </div>
+                </div>
+
+                <div class="quick-stats">
+                    <div class="stat-card">
+                        <h4>بازی‌های انجام شده</h4>
+                        <div class="stat-value">47</div>
+                    </div>
+                    <div class="stat-card">
+                        <h4>بردها</h4>
+                        <div class="stat-value">32</div>
+                    </div>
+                    <div class="stat-card">
+                        <h4>باخت‌ها</h4>
+                        <div class="stat-value">15</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- بخش‌های دیگر -->
+            <section class="dashboard-grid">
+                <!-- تراکنش‌ها -->
+                <div class="grid-card">
+                    <div class="card-header">
+                        <h3>تراکنش‌های اخیر</h3>
+                        <a href="#" class="view-all">مشاهده همه</a>
+                    </div>
+                    <div class="transactions-list">
+                        <div class="transaction-item success">
+                            <div class="transaction-info">
+                                <span class="transaction-type">برداشت</span>
+                                <span class="transaction-date">امروز - ۱۴:۲۰</span>
+                            </div>
+                            <div class="transaction-amount">+500,000 تومان</div>
+                        </div>
+                        <div class="transaction-item danger">
+                            <div class="transaction-info">
+                                <span class="transaction-type">شارژ حساب</span>
+                                <span class="transaction-date">دیروز - ۱۸:۴۵</span>
+                            </div>
+                            <div class="transaction-amount">-200,000 تومان</div>
+                        </div>
+                        <div class="transaction-item success">
+                            <div class="transaction-info">
+                                <span class="transaction-type">برداشت</span>
+                                <span class="transaction-date">دیروز - ۱۲:۱۰</span>
+                            </div>
+                            <div class="transaction-amount">+750,000 تومان</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- جایزه‌ها -->
+                <div class="grid-card">
+                    <div class="card-header">
+                        <h3>جایزه‌های فعال</h3>
+                        <a href="#" class="view-all">مشاهده همه</a>
+                    </div>
+                    <div class="rewards-list">
+                        <div class="reward-item">
+                            <div class="reward-icon">🎁</div>
+                            <div class="reward-info">
+                                <h4>جایزه هفتگی</h4>
+                                <p>مهلت استفاده: 2 روز دیگر</p>
+                            </div>
+                            <div class="reward-value">100,000 تومان</div>
+                        </div>
+                        <div class="reward-item">
+                            <div class="reward-icon">🏆</div>
+                            <div class="reward-info">
+                                <h4>جایزه ویژه</h4>
+                                <p>مهلت استفاده: 5 روز دیگر</p>
+                            </div>
+                            <div class="reward-value">50,000 تومان</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- جایزه‌های برداشت شده -->
+                <div class="grid-card">
+                    <div class="card-header">
+                        <h3>جایزه‌های برداشت شده</h3>
+                        <a href="#" class="view-all">مشاهده همه</a>
+                    </div>
+                    <div class="rewards-list">
+                        <div class="reward-item claimed">
+                            <div class="reward-icon">💰</div>
+                            <div class="reward-info">
+                                <h4>جایزه ثبت‌نام</h4>
+                                <p>برداشت شده در: ۱۴۰۲/۰۵/۱۲</p>
+                            </div>
+                            <div class="reward-value">200,000 تومان</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- فوتر -->
+        <footer class="dashboard-footer">
+            <p>© ۱۴۰۲ - تمام حقوق برای بازی انفجار محفوظ است</p>
+        </footer>
+    </div>
+
+    <script src="../ASSETS/JS/script.js"></script>
+</body>
+</html>
