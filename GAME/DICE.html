@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بازی تاس</title>
+    <link rel="stylesheet" href="../ASSETS/CSS/DICE.css">
+</head>
+<body>
+        <!-- هدر -->
+        <header class="dashboard-header">
+            <div class="logo">داشبورد</div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../DASHBOARD.html" class="active">داشبورد</a></li>
+                    <li><a href="#">پشتیبان</a></li>
+                    <li><a href="COINFLIP.html">شیر خط</a></li>
+                    <li><a href="MINES.html">الماس</a></li>
+                    <li><a href="TOWER.html">همسان</a></li>
+                    <li><a href="CRASH.html">انفجار</a></li>
+                    <li><a href="PLINKO.html">پلینکو </a></li>
+
+                </ul>
+            </nav>
+            <div class="user-account">
+                <span class="username">کاربر مهمان</span>
+                <div class="avatar">👤</div>
+            </div>
+        </header>
+    <div class="dice-game">
+        <header>
+            <h1>بازی تاس 🎲</h1>
+            <div class="balance-box">
+                موجودی: <span id="balance">1000</span> تومان
+            </div>
+        </header>
+
+        <div class="game-container">
+            <div class="dice-container" id="dice">
+                <div class="dice-face" data-face="1">⚀</div>
+                <div class="dice-face" data-face="2">⚁</div>
+                <div class="dice-face" data-face="3">⚂</div>
+                <div class="dice-face" data-face="4">⚃</div>
+                <div class="dice-face" data-face="5">⚄</div>
+                <div class="dice-face" data-face="6">⚅</div>
+            </div>
+
+            <div class="bet-controls">
+                <div class="form-group">
+                    <label for="bet-amount">مبلغ شرط:</label>
+                    <input type="number" id="bet-amount" min="10" value="100">
+                </div>
+
+                <div class="form-group">
+                    <label for="number-select">عدد مورد نظر:</label>
+                    <select id="number-select">
+                        <option value="1">1 (6x)</option>
+                        <option value="2">2 (5x)</option>
+                        <option value="3">3 (4x)</option>
+                        <option value="4">4 (3x)</option>
+                        <option value="5">5 (2x)</option>
+                        <option value="6">6 (1.5x)</option>
+                    </select>
+                </div>
+            </div>
+
+            <button id="roll-btn" class="roll-btn">پرتاب تاس</button>
+        </div>
+
+        <div class="history">
+            <h3>تاریخچه بازی‌ها</h3>
+            <div id="history-list" class="history-items"></div>
+        </div>
+
+        <div id="message" class="message"></div>
+    </div>
+
+    <script src="../ASSETS/JS/DICE.js"></script>
+</body>
+</html>

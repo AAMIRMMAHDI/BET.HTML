@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1a1a2e;
+    color: white;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #16213e;
+    border-radius: 10px;
+}
+
+header h1 {
+    color: #f9c74f;
+    font-size: 24px;
+}
+
+.balance-box {
+    background-color: #0f3460;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 20px;
+}
+
+.main-game-area {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.live-chart-container {
+    background-color: #0f3460;
+    padding: 20px;
+    border-radius: 15px;
+    height: 400px;
+    position: relative;
+}
+
+#live-chart {
+    width: 100%;
+    height: 100%;
+}
+
+.multiplier-display {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(15, 52, 96, 0.8);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.multiplier-label {
+    color: #a1a1a1;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.multiplier-value {
+    font-weight: bold;
+    color: #4cc9f0;
+    font-size: 22px;
+}
+
+.horizontal-history {
+    background-color: #0f3460;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.horizontal-history h3 {
+    color: #f9c74f;
+    margin-bottom: 10px;
+}
+
+.history-container {
+    width: 100%;
+    overflow-x: auto;
+    background-color: #16213e;
+    border-radius: 8px;
+    padding: 10px;
+    max-height: 120px;
+}
+
+.history-scroll {
+    display: inline-flex;
+    gap: 10px;
+    min-width: 100%;
+}
+
+.history-items {
+    display: flex;
+    gap: 10px;
+}
+
+.history-item {
+    min-width: 80px;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    flex-shrink: 0;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.history-item.green {
+    background-color: #2d6a4f;
+}
+
+.history-item.red {
+    background-color: #9a031e;
+}
+
+.controls-section {
+    background-color: #0f3460;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.bet-controls h3 {
+    color: #f9c74f;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #a1a1a1;
+}
+
+.form-group input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #16213e;
+    border: 1px solid #4a4e69;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.quick-bets {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.quick-bet {
+    background-color: #4a4e69;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.quick-bet:hover {
+    background-color: #f8961e;
+}
+
+input[type="range"] {
+  width: 100%;
+  height: 8px;
+  -webkit-appearance: none; /* برای مرورگرهای وبکیت مثل کروم و سافاری */
+  -moz-appearance: none;    /* برای فایرفاکس */
+  appearance: none;         /* استاندارد مدرن */
+  background: #4a4e69;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  outline: none;            /* حذف هایلایت پیشفرض */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #f8961e;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.cashout-value {
+    text-align: center;
+    font-weight: bold;
+    color: #f9c74f;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.game-btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.start-btn {
+    background-color: #4cc9f0;
+    color: white;
+}
+
+.start-btn:hover {
+    background-color: #4895ef;
+}
+
+.cash-out-btn {
+    background-color: #f8961e;
+    color: white;
+}
+
+.cash-out-btn:hover {
+    background-color: #f3722c;
+}
+
+.cash-out-btn:disabled {
+    background-color: #4a4e69;
+    cursor: not-allowed;
+}
+
+.cash-out-btn span {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.animating {
+    animation: pulse 0.5s infinite;
+    color: #f8961e !important;
+}
+
+@media (max-width: 768px) {
+    .game-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    .live-chart-container {
+        height: 300px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

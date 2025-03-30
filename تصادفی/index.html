@@ -1,59 +1,0 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بازی ماین</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="mines-game">
-        <header>
-            <h1>بازی ماین 💎</h1>
-            <div class="balance-box">
-                موجودی: <span id="balance">1000</span> تومان
-            </div>
-        </header>
-
-        <div class="game-settings">
-            <div class="setting-group">
-                <label for="bet-amount">مبلغ شرط:</label>
-                <input type="number" id="bet-amount" min="10" value="100">
-            </div>
-            
-            <div class="setting-group">
-                <label for="mines-count">تعداد ماین‌ها:</label>
-                <select id="mines-count">
-                    <option value="3">3 (آسان)</option>
-                    <option value="5">5 (متوسط)</option>
-                    <option value="7">7 (سخت)</option>
-                    <option value="10">10 (خیلی سخت)</option>
-                </select>
-            </div>
-            
-            <button id="start-game" class="btn-start">شروع بازی جدید</button>
-        </div>
-
-        <div class="game-board" id="game-board">
-            <!-- مربع‌های بازی اینجا ساخته می‌شوند -->
-        </div>
-
-        <div class="game-controls">
-            <div class="stats">
-                <div>مربع‌های باقیمانده: <span id="remaining">25</span></div>
-                <div>سود احتمالی: <span id="potential-win">0</span> تومان</div>
-            </div>
-            <button id="cash-out" class="btn-cashout" disabled>دریافت سود</button>
-        </div>
-
-        <div class="history">
-            <h3>تاریخچه بازی‌ها</h3>
-            <div id="history-list" class="history-list"></div>
-        </div>
-
-        <div id="message" class="message"></div>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
