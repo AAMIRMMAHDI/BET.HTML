@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بازی سکه کلاسیک</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-form">
+        <form class="coin-app">
+            <header>
+                <h1>سکه پرتابی 🪙</h1>
+                <div class="balance-box">
+                    موجودی: <span id="balance">1000</span> تومان
+                </div>
+            </header>
+
+            <div class="form-section">
+                <div class="coin-container">
+                    <div class="coin" id="coin">
+                        <div class="side front"></div>
+                        <div class="side back"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="bet-controls">
+                    <div class="form-group">
+                        <label for="amount">مبلغ شرط:</label>
+                        <input type="number" id="amount" placeholder="مبلغ به تومان" min="10">
+                    </div>
+
+                    <div class="bet-options">
+                        <button type="button" id="bet-head" class="bet-btn">
+                            <span>شیر</span>
+                            <span class="multiplier">1.95x</span>
+                        </button>
+                        <button type="button" id="bet-tail" class="bet-btn">
+                            <span>خط</span>
+                            <span class="multiplier">1.95x</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="history">
+                    <h3>تاریخچه نتایج</h3>
+                    <div id="history-items" class="history-items"></div>
+                </div>
+            </div>
+
+            <div class="message" id="message"></div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
