@@ -12,17 +12,6 @@ body {
     padding: 20px;
 }
 
-
-
-
-
-/* PLINKO */
-
-
-
-
-
-
 .plinko-app {
     max-width: 1000px;
     margin: 0 auto;
@@ -221,4 +210,3 @@ header h1 {
 .ball.bounce {
     animation: bounce 0.3s ease;
 }
-

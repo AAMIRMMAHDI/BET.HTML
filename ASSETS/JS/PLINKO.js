@@ -1,11 +1,3 @@
-
-
-/* PLINKO */
-
-
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
     // Elements
     const gameBoard = document.getElementById('game-board');
@@ -47,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 const x = (width / 2) + (col - (pegsInRow - 1) / 2) * pegSpacing;
                 const y = (height * 0.1) + row * pegSpacing;
                 
-                // Check if peg is within boundaries
                 if (x >= boundaryPadding && x <= width - boundaryPadding) {
                     const peg = document.createElement('div');
                     peg.className = 'peg';
@@ -136,18 +127,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         function finishGame() {
-            // Calculate Multiplier
-            const slotWidth = gameBoard.clientWidth / slots.length;
-            const slotIndex = Math.min(
-                Math.floor(posX / slotWidth),
-                slots.length - 1
-            );
+            // محاسبه دقیق موقعیت نهایی توپ با در نظر گرفتن عرض صفحه و اسلات‌ها
+            const ballCenterX = posX + ballRadius;
+            const gameBoardWidth = gameBoard.clientWidth;
+            const slotWidth = gameBoardWidth / slots.length;
+            
+            // محاسبه index اسلات با در نظر گرفتن تمام عرض صفحه
+            let slotIndex = Math.floor((ballCenterX / gameBoardWidth) * slots.length);
+            slotIndex = Math.max(0, Math.min(slotIndex, slots.length - 1));
             
             const selectedSlot = slots[slotIndex];
             const multiplier = parseFloat(selectedSlot.dataset.multiplier);
             const win = Math.floor(bet * multiplier);
 
-            // Highlight Slot
+            // Highlight Correct Slot
             selectedSlot.classList.add('active');
             setTimeout(() => selectedSlot.classList.remove('active'), 2000);
 
@@ -213,19 +206,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     rowsSelect.addEventListener('change', () => {
-        // Cancel all animations
         animationIds.forEach(id => cancelAnimationFrame(id));
         animationIds = [];
         activeBalls = 0;
         startBtn.disabled = false;
-        
         createPegs(parseInt(rowsSelect.value));
     });
 
     // Initialize
     initGame();
 });
-
-
-
-
