@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviator Masters Pro ✈️</title>
+    <link rel="stylesheet" href="../ASSETS/CSS/AVIAMASTERS.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <div class="bet-section">
+                <div class="balance">موجودی: <span id="balance">5000</span> تومان</div>
+                <div class="bet-controls">
+                    <div class="bet-amount-container">
+                        <button class="amount-btn" data-amount="100">100</button>
+                        <button class="amount-btn" data-amount="500">500</button>
+                        <button class="amount-btn" data-amount="1000">1000</button>
+                        <input type="number" id="bet-amount" min="100" max="10000" value="100" placeholder="مبلغ شرط">
+                    </div>
+                    <button id="place-bet" class="btn-primary">شروع پرواز</button>
+                    <button id="cash-out" class="btn-danger" disabled>دریافت سود (<span id="current-cashout">1.00</span>x)</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="game-area">
+            <div class="sky-background">
+                <div class="clouds"></div>
+                <div class="multiplier-display animate__animated">
+                    <span id="multiplier">1.00</span>x
+                </div>
+                <div class="plane-container">
+                    <div class="plane" id="plane"></div>
+                    <div class="shadow"></div>
+                </div>
+                <div class="runway"></div>
+            </div>
+            
+            <div class="history-graph">
+                <div class="graph-line"></div>
+                <div class="history-points"></div>
+                <div class="x-axis">
+                    <span>1x</span>
+                    <span>2x</span>
+                    <span>3x</span>
+                    <span>5x</span>
+                    <span>10x</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="game-info">
+            <div class="last-rounds">
+                <h3><i class="icon-history"></i> تاریخچه پروازها</h3>
+                <div class="rounds-list" id="multipliers-list"></div>
+            </div>
+            <div class="auto-cashout">
+                <h3><i class="icon-auto"></i> دریافت خودکار</h3>
+                <div class="slider-container">
+                    <input type="range" id="auto-cashout" min="1.1" max="20" step="0.1" value="2">
+                    <div class="slider-marks">
+                        <span>1x</span>
+                        <span>5x</span>
+                        <span>10x</span>
+                        <span>20x</span>
+                    </div>
+                    <div class="slider-value" id="auto-cashout-value">2.00x</div>
+                </div>
+                <button id="auto-btn" class="btn-secondary">فعالسازی اتوماتیک</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- صداها -->
+    <audio id="engine-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-jet-flying-in-air-1740.mp3" preload="auto" loop></audio>
+    <audio id="takeoff-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-airplane-taking-off-1546.mp3" preload="auto"></audio>
+    <audio id="crash-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-explosion-impact-1684.mp3" preload="auto"></audio>
+    <audio id="win-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-winning-chimes-2015.mp3" preload="auto"></audio>
+    <audio id="cashout-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-achievement-bell-600.mp3" preload="auto"></audio>
+    <audio id="wind-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-wind-air-1454.mp3" preload="auto" loop></audio>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="../ASSETS/JS/AVIAMASTERS.js"></script>
+</body>
+</html>

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -21,64 +20,61 @@
             flex-direction: column;
         }
         
-        /* هدر */
+        /* هدر بهینه‌شده */
         .dashboard-header {
             background: linear-gradient(90deg, #16213e, #0f3460);
-            padding: 15px 0;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            padding: 6px 0;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
             position: sticky;
             top: 0;
             z-index: 100;
         }
         
-        .main-nav ul {
+        .header-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
-            justify-content: center;
-            list-style: none;
-            gap: 20px;
-            padding: 0 20px;
-        }
-        
-        .main-nav a {
-            color: #e6e6e6;
-            text-decoration: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            font-weight: 500;
-            transition: all 0.3s;
-            display: flex;
+            justify-content: space-between;
             align-items: center;
-            gap: 8px;
+            padding: 0 15px;
         }
         
-        .main-nav a:hover {
-            background: rgba(255, 255, 255, 0.1);
-            color: #fff;
+        /* منوی همبرگری */
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 28px;
+            height: 24px;
+            cursor: pointer;
+            z-index: 101;
+            padding: 4px;
         }
         
-        .main-nav a.active {
-            background: #4fc3f7;
-            color: #16213e;
-            font-weight: bold;
+        .hamburger-menu span {
+            width: 100%;
+            height: 2px;
+            background-color: #4fc3f7;
+            border-radius: 2px;
+            transition: all 0.3s ease;
         }
         
-        /* بخش دکمه های ورود */
+        /* دکمه‌های ورود/ثبت نام */
         .auth-buttons {
-            position: absolute;
-            left: 20px;
-            top: 50%;
-            transform: translateY(-50%);
             display: flex;
-            gap: 10px;
+            gap: 6px;
+            margin-left: 10px;
         }
         
         .auth-btn {
-            padding: 8px 20px;
-            border-radius: 5px;
+            padding: 5px 12px;
+            border-radius: 4px;
             font-weight: 500;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.2s;
             border: none;
+            font-size: 0.85rem;
         }
         
         .login-btn {
@@ -100,10 +96,45 @@
             background: #3fb3e7;
         }
         
+        /* منوی اصلی */
+        .main-nav {
+            display: flex;
+            transition: all 0.3s ease;
+        }
+        
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 6px;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .main-nav a {
+            color: #e6e6e6;
+            text-decoration: none;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: all 0.2s;
+            font-size: 0.9rem;
+        }
+        
+        .main-nav a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+        
+        .main-nav a.active {
+            background: #4fc3f7;
+            color: #16213e;
+            font-weight: bold;
+        }
+        
         /* محتوای اصلی */
         .main-content {
             flex: 1;
-            padding: 40px 20px;
+            padding: 30px 15px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -111,65 +142,68 @@
         
         .games-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            gap: 80px;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
             width: 100%;
-            max-width: 12000px;
-            margin-top: 40px;
+            max-width: 1200px;
+            margin-top: 30px;
         }
         
         .game-card {
             background: rgba(26, 58, 110, 0.7);
-            border-radius: 10px;
+            border-radius: 8px;
             overflow: hidden;
             transition: transform 0.3s, box-shadow 0.3s;
             border: 1px solid #2a4a8a;
         }
         
         .game-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
         .game-card img {
             width: 100%;
-            height: 500px;
+            height: 180px;
             object-fit: cover;
         }
         
         .game-info {
-            padding: 30px;
+            padding: 12px;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
         
-        .game-info h3 {
-            margin-bottom: 10px;
-            color: #4fc3f7;
+        .game-info p {
+            font-size: 0.9rem;
         }
         
         .play-btn {
             background: linear-gradient(90deg, #4fc3f7, #1976d2);
             color: white;
             border: none;
-            padding: 10px 25px;
-            border-radius: 50px;
+            padding: 8px 16px;
+            border-radius: 20px;
             cursor: pointer;
             font-weight: bold;
-            margin-top: 15px;
-            transition: all 0.3s;
+            font-size: 0.85rem;
+            transition: all 0.2s;
         }
         
         .play-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 15px rgba(79, 195, 247, 0.5);
+            transform: scale(1.03);
+            box-shadow: 0 0 10px rgba(79, 195, 247, 0.5);
         }
         
         /* فوتر */
         footer {
             background: #0f3460;
-            padding: 20px;
+            padding: 15px;
             text-align: center;
             margin-top: auto;
+            font-size: 0.9rem;
         }
         
         .footer-content {
@@ -180,14 +214,16 @@
         .footer-links {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 10px;
         }
         
         .footer-links a {
             color: #a7c4ff;
             text-decoration: none;
-            transition: color 0.3s;
+            transition: color 0.2s;
+            font-size: 0.85rem;
         }
         
         .footer-links a:hover {
@@ -196,42 +232,106 @@
         
         .copyright {
             color: #a7c4ff;
-            font-size: 14px;
+            font-size: 0.8rem;
+        }
+        
+        /* استایل‌های ریسپانسیو */
+        @media (max-width: 992px) {
+            .games-container {
+                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            }
         }
         
         @media (max-width: 768px) {
+            .hamburger-menu {
+                display: flex;
+            }
+            
+            .main-nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 300px;
+                height: 100vh;
+                background: #0f3460;
+                flex-direction: column;
+                padding: 70px 20px 20px;
+                box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
+            }
+            
+            .main-nav.active {
+                right: 0;
+            }
+            
             .main-nav ul {
-                flex-wrap: wrap;
-                gap: 10px;
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .main-nav a {
+                padding: 10px 15px;
+                font-size: 0.95rem;
             }
             
             .auth-buttons {
-                position: static;
-                transform: none;
+                margin: 20px 0 0;
                 justify-content: center;
-                margin-top: 15px;
+            }
+            
+            .game-card img {
+                height: 150px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header-container {
+                padding: 0 10px;
+            }
+            
+            .games-container {
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+                gap: 15px;
+            }
+            
+            .game-info {
+                padding: 10px;
+            }
+            
+            .play-btn {
+                padding: 6px 12px;
+                font-size: 0.8rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- هدر -->
+    <!-- هدر بهینه‌شده -->
     <header class="dashboard-header">
-        <div class="auth-buttons">
-            <button class="auth-btn login-btn">ورود</button>
-            <button class="auth-btn register-btn">ثبت نام</button>
+        <div class="header-container">
+            <div class="hamburger-menu" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <div class="auth-buttons">
+                <button href="AUTHENTICATION/LOGIN.html" class="auth-btn login-btn">ورود</button>
+                <button href="AUTHENTICATION/SIGUP.html" class="auth-btn register-btn">ثبت نام</button>
+            </div>
+            
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="DASHBOARD/DASHBOARD.html" class="active">داشبورد</a></li>
+                    <li><a href="#">پشتیبان</a></li>
+                    <li><a href="GAME/COINFLIP.html">شیر خط</a></li>
+                    <li><a href="GAME/MINES.html">الماس</a></li>
+                    <li><a href="GAME/TOWER.html">همسان</a></li>
+                    <li><a href="GAME/CRASH.html">انفجار</a></li>
+                    <li><a href="GAME/PLINKO.html">پلینکو</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="DASHBOARD/DASHBOARD.html" class="active">داشبورد</a></li>
-                <li><a href="#">پشتیبان</a></li>
-                <li><a href="GAME/COINFLIP.html">شیر خط</a></li>
-                <li><a href="GAME/MINES.html">الماس</a></li>
-                <li><a href="GAME/TOWER.html">همسان</a></li>
-                <li><a href="GAME/CRASH.html">انفجار</a></li>
-                <li><a href="GAME/PLINKO.html">پلینکو</a></li>
-            </ul>
-        </nav>
     </header>
 
     <!-- محتوای اصلی -->
@@ -245,7 +345,6 @@
                 <img src="ASSETS/IMG/coinflip.png" alt="شیر خط">
                 <div class="game-info">
                     <p>شانس خود را با پرتاب سکه امتحان کنید</p>
-                    <br><br>
                     <a href="GAME/COINFLIP.html" class="play-btn">بازی کن</a>
                 </div>
             </div>
@@ -255,7 +354,6 @@
                 <img src="ASSETS/IMG/mines.png" alt="الماس">
                 <div class="game-info">
                     <p>الماس ها را پیدا کنید و از مین ها دوری کنید</p>
-                    <br><br>
                     <a href="GAME/MINES.html" class="play-btn">بازی کن</a>
                 </div>
             </div>
@@ -265,7 +363,6 @@
                 <img src="ASSETS/IMG/tower.png" alt="همسان">
                 <div class="game-info">
                     <p>برج خود را با انتخاب درست بالا ببرید</p>
-                    <bR><br>
                     <a href="GAME/TOWER.html" class="play-btn">بازی کن</a>
                 </div>
             </div>
@@ -275,7 +372,6 @@
                 <img src="ASSETS/IMG/crash.png" alt="انفجار">
                 <div class="game-info">
                     <p>قبل از انفجار خارج شوید و برنده شوید</p>
-                    <br><br>
                     <a href="GAME/CRASH.html" class="play-btn">بازی کن</a>
                 </div>
             </div>
@@ -285,8 +381,25 @@
                 <img src="ASSETS/IMG/plinko.png" alt="پلینکو">
                 <div class="game-info">
                     <p>توپ را رها کنید و ضریب برد خود را مشخص کنید</p>
-                    <br><br>
                     <a href="GAME/PLINKO.html" class="play-btn">بازی کن</a>
+                </div>
+            </div>
+            
+            <!-- هواپیما بازی 6-->
+            <div class="game-card">
+                <img src="ASSETS/IMG/ccross.png" alt="هواپیما">
+                <div class="game-info">
+                    <p>با عبور مرغ از ماشین ها برنده شوید</p>
+                    <a href="GAME/CCROSS.html" class="play-btn">بازی کن</a>
+                </div>
+            </div>
+            
+            <!-- مرغ بازی 7-->
+            <div class="game-card">
+                <img src="ASSETS/IMG/aviamasters.png" alt="مرغ">
+                <div class="game-info">
+                    <p>قبل سقوط هواپیما خروج شوید و برنده شوید</p>
+                    <a href="GAME/AVIAMASTERS.html" class="play-btn">بازی کن</a>
                 </div>
             </div>
         </div>
@@ -304,5 +417,43 @@
             <p class="copyright">تمامی حقوق برای کازینو آنلاین محفوظ است © 2023</p>
         </div>
     </footer>
+
+    <script>
+        // اسکریپت منوی همبرگری
+        const hamburger = document.getElementById('hamburger');
+        const mainNav = document.getElementById('mainNav');
+        const spans = hamburger.querySelectorAll('span');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mainNav.classList.toggle('active');
+            
+            if(mainNav.classList.contains('active')) {
+                // تبدیل به علامت ضربدر
+                spans[0].style.transform = 'rotate(-45deg) translate(-4px, 5px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(45deg) translate(-4px, -5px)';
+            } else {
+                // بازگشت به حالت اولیه
+                spans[0].style.transform = '';
+                spans[1].style.opacity = '';
+                spans[2].style.transform = '';
+            }
+        });
+        
+        // بستن منو با کلیک روی لینک‌ها
+        const navLinks = document.querySelectorAll('.main-nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if(window.innerWidth <= 768) {
+                    hamburger.classList.remove('active');
+                    mainNav.classList.remove('active');
+                    spans[0].style.transform = '';
+                    spans[1].style.opacity = '';
+                    spans[2].style.transform = '';
+                }
+            });
+        });
+    </script>
 </body>
 </html>

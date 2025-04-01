@@ -4,28 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>داشبورد کاربر</title>
-    <link rel="stylesheet" href="ASSETS/CSS/DASHBOARD.css">
+    <link rel="stylesheet" href="../ASSETS/CSS/DASHBOARD.css">
 </head>
 <body>
     <div class="dashboard-container">
-        <!-- هدر -->
+        <!-- هدر ریسپانسیو -->
         <header class="dashboard-header">
-            <div class="logo">داشبورد</div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="DASHBOARD.html" class="active">داشبورد</a></li>
-                    <li><a href="#">پشتیبان</a></li>
-                    <li><a href="../GAME/COINFLIP.html">شیر خط</a></li>
-                    <li><a href="../GAME/MINES.html">الماس</a></li>
-                    <li><a href="../GAME/TOWER.html">همسان</a></li>
-                    <li><a href="../GAME/CRASH.html">انفجار</a></li>
-                    <li><a href="../GAME/PLINKO.html">پلینکو </a></li>
-
-                </ul>
-            </nav>
-            <div class="user-account">
-                <span class="username">کاربر مهمان</span>
-                <div class="avatar">👤</div>
+            <div class="header-container">
+                <div class="hamburger-menu" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <div class="logo">داشبورد</div>
+                
+                <nav class="main-nav" id="mainNav">
+                    <ul>
+                        <li><a href="DASHBOARD.html" class="active">داشبورد</a></li>
+                        <li><a href="../index.html">بازی ها</a></li>
+                        <li><a href="#">پشتیبان</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="user-account">
+                    <span class="username">کاربر مهمان</span>
+                    <div class="avatar">👤</div>
+                </div>
             </div>
         </header>
 
@@ -155,6 +160,42 @@
         </footer>
     </div>
 
-    <script src="../ASSETS/JS/DASHBOARD.js"></script>
+    <script>
+        // اسکریپت منوی همبرگری
+        const hamburger = document.getElementById('hamburger');
+        const mainNav = document.getElementById('mainNav');
+        const spans = hamburger.querySelectorAll('span');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mainNav.classList.toggle('active');
+            
+            if(mainNav.classList.contains('active')) {
+                // تبدیل به علامت ضربدر
+                spans[0].style.transform = 'rotate(-45deg) translate(-4px, 5px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(45deg) translate(-4px, -5px)';
+            } else {
+                // بازگشت به حالت اولیه
+                spans[0].style.transform = '';
+                spans[1].style.opacity = '';
+                spans[2].style.transform = '';
+            }
+        });
+        
+        // بستن منو با کلیک روی لینک‌ها
+        const navLinks = document.querySelectorAll('.main-nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if(window.innerWidth <= 768) {
+                    hamburger.classList.remove('active');
+                    mainNav.classList.remove('active');
+                    spans[0].style.transform = '';
+                    spans[1].style.opacity = '';
+                    spans[2].style.transform = '';
+                }
+            });
+        });
+    </script>
 </body>
 </html>

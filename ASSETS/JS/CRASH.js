@@ -1,5 +1,5 @@
 // Game variables
-let balance = 10000000000000000000000000000000000000000000000000;
+let balance = 1000000000000 ;
 let betAmount = 10;
 let cashOutMultiplier = 1.5;
 let gameStatus = 'waiting'; // waiting, playing, crashed

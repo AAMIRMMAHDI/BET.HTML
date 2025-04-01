@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chicken Cross - عبور مرغ</title>
+    <link rel="stylesheet" href="../ASSETS/CSS/CCROSS.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <div class="bet-section">
+                <div class="balance">موجودی: <span id="balance">1000</span> تومان</div>
+                <div class="bet-controls">
+                    <input type="number" id="bet-amount" min="10" max="1000" value="100" placeholder="مبلغ شرط">
+                    <select id="difficulty">
+                        <option value="easy">ساده (ضریب 0.5)</option>
+                        <option value="medium">متوسط (ضریب 1.5)</option>
+                        <option value="hard">سخت (ضریب 2)</option>
+                        <option value="extreme">خیلی سخت (ضریب 3)</option>
+                    </select>
+                    <button id="place-bet">ثبت شرط</button>
+                </div>
+            </div>
+            <h1>Chicken Cross 🐔</h1>
+        </div>
+        
+        <div class="game-info">
+            <div class="multiplier">ضریب: <span id="multiplier">0.5</span>x</div>
+            <div class="lives">جان: <span id="lives">3</span></div>
+            <button id="start-btn">شروع بازی</button>
+        </div>
+        <div id="game-board"></div>
+        <div class="controls">
+            <p>از کلیدهای جهت‌دار کیبورد برای حرکت استفاده کنید</p>
+            <div class="keys">
+                <div class="key">↑</div>
+                <div class="key">←</div>
+                <div class="key">↓</div>
+                <div class="key">→</div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="move-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-quick-jump-arcade-game-239.mp3" preload="auto"></audio>
+    <audio id="crash-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-explosion-impact-1684.mp3" preload="auto"></audio>
+    <audio id="win-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-winning-chimes-2015.mp3" preload="auto"></audio>
+
+    <script src="../ASSETS/JS/CCROSS.js"></script>
+</body>
+</html>
