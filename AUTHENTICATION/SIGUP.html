@@ -4,30 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>داشبورد کاربر</title>
-    <link rel="stylesheet" href="../ASSETS/CSS/style.css">
+    <link rel="stylesheet" href="../ASSETS/CSS/AUTHENTICATION.css">
 </head>
 <body>
     <div class="dashboard-container">
-        <!-- هدر -->
-        <header class="dashboard-header">
-            <div class="logo">داشبورد</div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#" class="active">داشبورد</a></li>
-                    <li><a href="#">پشتیبان</a></li>
-                    <li><a href="#">راهنمای بازی</a></li>
-                    <li><a href="#">تخته نرد</a></li>
-                    <li><a href="#">پاسور</a></li>
-                    <li><a href="../GAME/CRASH.html">انفجار</a></li>
-                    <li><a href="../GAME/PLINKO.html">پلینکو </a></li>
+    <!-- هدر بهینه‌شده -->
+    <header class="dashboard-header">
+        <div class="header-container">
+            <div class="hamburger-menu" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <div class="auth-buttons">
+                <a href="LOGIN.html" class="auth-btn login-btn">ورود</a>
+                <a href="SIGUP.html" class="auth-btn register-btn">ثبت نام</a>
+            </div>
 
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="../DASHBOARD/DASHBOARD.html" class="active">داشبورد</a></li>
+                    <li><a href="#">پشتیبان</a></li>
+                    <li><a href="../GAME/COINFLIP.html">شیر خط</a></li>
+                    <li><a href="../GAME/MINES.html">الماس</a></li>
+                    <li><a href="../GAME/TOWER.html">همسان</a></li>
+                    <li><a href="../GAME/CRASH.html">انفجار</a></li>
+                    <li><a href="../GAME/PLINKO.html">پلینکو</a></li>
                 </ul>
             </nav>
-            <div class="user-account">
-                <span class="username">کاربر مهمان</span>
-                <div class="avatar">👤</div>
-            </div>
-        </header>
+        </div>
+    </header>
+
 
     <div class="auth-container">
         <div class="auth-card">
@@ -59,6 +67,6 @@
         </div>
     </div>
 
-    <script src="../ASSETS/JS/script.js"></script>
+    <script src="../ASSETS/JS/AUTHENTICATION.js"></script>
 </body>
 </html>

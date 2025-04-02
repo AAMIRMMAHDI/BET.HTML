@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('https://img.freepik.com/free-vector/hand-painted-watercolor-pirate-ship-background_23-2149434515.jpg') no-repeat center fixed;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+.game-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 50px auto;
+    max-width: 500px;
+}
+
+h1 {
+    color: gold;
+}
+
+.player, .enemy {
+    margin: 30px 0;
+}
+
+.player img, .enemy img {
+    width: 100px;
+    filter: drop-shadow(0 0 5px white);
+}
+
+.health-bar {
+    width: 200px;
+    height: 20px;
+    background: #555;
+    margin: 10px auto;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.health {
+    height: 100%;
+    width: 100%;
+    background: green;
+}
+
+.controls button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background: gold;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.controls button:hover {
+    background: darkorange;
+}
+
+#log {
+    margin-top: 20px;
+    color: white;
+    height: 100px;
+    overflow-y: auto;
+    border: 1px solid gold;
+    padding: 10px;
+    border-radius: 5px;
+}
